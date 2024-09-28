@@ -1,4 +1,4 @@
-package com.ioniccapacitorapp.proyectoUTNPPS;
+package com.ioniccapacitorapp.AprendeConUnToque;
 
 import com.getcapacitor.BridgeActivity;
 

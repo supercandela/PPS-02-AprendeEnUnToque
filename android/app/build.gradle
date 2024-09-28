@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.ioniccapacitorapp.proyectoUTNPPS"
+    namespace "com.ioniccapacitorapp.AprendeConUnToque"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.ioniccapacitorapp.proyectoUTNPPS"
+        applicationId "com.ioniccapacitorapp.AprendeConUnToque"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
