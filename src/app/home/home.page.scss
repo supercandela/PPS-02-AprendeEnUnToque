@@ -30,7 +30,15 @@ ion-content {
     border: none;
     background-color: transparent;
     padding: 5px;
+    border-radius: 40%;
   }
+
+  .seleccionado {
+    box-shadow: 0 4px 8px rgb(156, 39, 185); /* Sombra alrededor del botón */
+    transform: scale(1.05); /* Opcional: agrandar un poco el botón */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transición suave */  
+  }
+  
 }
 
 .buttons-grid {
@@ -73,29 +81,53 @@ ion-content {
 
 @media (orientation: landscape) {
   ion-content {
+    --padding-right: 3%;
+    --padding-left: 3%;
+    --padding-top: 0;
+    --padding-bottom: 0;
     flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
     /* Cambia la dirección del contenido a fila */
   }
 
-  .header-container {
-    width: 10%;
-    /* Ahora el header ocupa un 10% de ancho en formato horizontal */
-    height: 100%;
-    /* Asegura que ocupe todo el alto de la pantalla */
-    flex-direction: column;
-    /* Mantiene los botones en vertical */
+  .header-container, .buttons-grid, .footer-container {
+    flex: 1; /* Ocupa una columna cada uno */
   }
 
+  .header-container {
+    flex-direction: row;
+    width: 20%;
+    height: 100%;
+
+    .header-row {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      height: 100%;
+    }
+
+    .header-button {
+      height: 33%;
+      width: 100%;
+    }
+
+  }
+
+
+
   .buttons-grid {
+    padding: 20px 0;
     grid-template-columns: repeat(3, 1fr);
     /* Grilla 3x2 en formato horizontal */
     grid-template-rows: repeat(2, 1fr);
-    flex-grow: 1;
+    // flex-grow: 1;
     /* Mantiene el tamaño adecuado del área de botones */
+    max-width: calc(100% - 20% - 7% - 6%);
   }
 
   .footer-container {
-    width: 10%;
+    width: 7%;
     /* Ahora el footer ocupa el 10% de ancho en formato horizontal */
     height: 100%;
     /* Asegura que ocupe todo el alto de la pantalla */

@@ -2,31 +2,42 @@
   <!-- Header con 6 botones en dos filas de 3 botones, con imágenes de fondo -->
   <div class="header-container">
     <div class="header-row">
-      <button ion-button class="header-button banderas" (click)="onSeleccionarIdioma(1)" style="background-image: url('../../assets/images/argentina.png');"></button>
-      <button ion-button class="header-button banderas" (click)="onSeleccionarIdioma(2)" style="background-image: url('../../assets/images/brasil.png');"></button>
-      <button ion-button class="header-button banderas" (click)="onSeleccionarIdioma(3)" style="background-image: url('../../assets/images/usa.png');"></button>
+      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'espanol'}"  (click)="onSeleccionarIdioma('espanol')"
+        style="background-image: url('../../assets/images/argentina.png');"></button>
+      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'portugues'}" (click)="onSeleccionarIdioma('portugues')"
+        style="background-image: url('../../assets/images/brasil.png');"></button>
+      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'ingles'}" (click)="onSeleccionarIdioma('ingles')"
+        style="background-image: url('../../assets/images/usa.png');"></button>
     </div>
     <div class="header-row">
-      <button ion-button class="header-button temas" (click)="onSeleccionarTema('colores')" style="background-image: url('../../assets/images/colores.png');"></button>
-      <button ion-button class="header-button temas" (click)="onSeleccionarTema('numeros')" style="background-image: url('../../assets/images/numeros.png');"></button>
-      <button ion-button class="header-button temas" (click)="onSeleccionarTema('animales')" style="background-image: url('../../assets/images/patita.png');"></button>
+      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'colores'}" (click)="onSeleccionarTema('colores')"
+        style="background-image: url('../../assets/images/colores.png');"></button>
+      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'numeros'}" (click)="onSeleccionarTema('numeros')"
+        style="background-image: url('../../assets/images/numeros.png');"></button>
+      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'animales'}" (click)="onSeleccionarTema('animales')"
+        style="background-image: url('../../assets/images/patita.png');"></button>
     </div>
   </div>
 
   <!-- Parte principal con 6 botones cuadrados que ocupan toda la pantalla -->
   <div class="buttons-grid">
-    <button ion-button class="square-button" (click)="onMainButtonClick(1)" style="background-image:url('{{ obtenerRutaImagen(1) }}')"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(2)" style="background-image:url('{{ obtenerRutaImagen(2) }}')"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(3)" style="background-image:url('{{ obtenerRutaImagen(3) }}')"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(4)" style="background-image:url('{{ obtenerRutaImagen(4) }}')"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(5)" style="background-image:url('{{ obtenerRutaImagen(5) }}')"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(6)" style="background-image:url('{{ obtenerRutaImagen(6) }}')"></button>
+    <button ion-button class="square-button" (click)="onReproducirSonido(1)"
+      style="background-image:url('{{ obtenerRutaImagen(1) }}')"></button>
+    <button ion-button class="square-button" (click)="onReproducirSonido(2)"
+      style="background-image:url('{{ obtenerRutaImagen(2) }}')"></button>
+    <button ion-button class="square-button" (click)="onReproducirSonido(3)"
+      style="background-image:url('{{ obtenerRutaImagen(3) }}')"></button>
+    <button ion-button class="square-button" (click)="onReproducirSonido(4)"
+      style="background-image:url('{{ obtenerRutaImagen(4) }}')"></button>
+    <button ion-button class="square-button" (click)="onReproducirSonido(5)"
+      style="background-image:url('{{ obtenerRutaImagen(5) }}')"></button>
+    <button ion-button class="square-button" (click)="onReproducirSonido(6)"
+      style="background-image:url('{{ obtenerRutaImagen(6) }}')"></button>
   </div>
 
   <!-- Footer con botón de cierre de sesión -->
   <div class="footer-container">
-    <button ion-button class="footer-button" (click)="onLogoutClick()" style="background-image: url('../../assets/images/boton-salir.png');"></button>
+    <button ion-button class="footer-button" (click)="onLogoutClick()"
+      style="background-image: url('../../assets/images/boton-salir.png');"></button>
   </div>
 </ion-content>
-
-
