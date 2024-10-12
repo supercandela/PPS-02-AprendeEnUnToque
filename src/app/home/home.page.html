@@ -1,25 +1,29 @@
-<ion-content>
-  <!-- Header con 6 botones en dos filas de 3 botones, con imágenes de fondo -->
+<div class="container">
+
   <div class="header-container">
     <div class="header-row">
-      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'espanol'}"  (click)="onSeleccionarIdioma('espanol')"
+      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'espanol'}"
+        (click)="onSeleccionarIdioma('espanol')"
         style="background-image: url('../../assets/images/argentina.png');"></button>
-      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'portugues'}" (click)="onSeleccionarIdioma('portugues')"
+      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'portugues'}"
+        (click)="onSeleccionarIdioma('portugues')"
         style="background-image: url('../../assets/images/brasil.png');"></button>
-      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'ingles'}" (click)="onSeleccionarIdioma('ingles')"
-        style="background-image: url('../../assets/images/usa.png');"></button>
+      <button ion-button class="header-button banderas" [ngClass]="{'seleccionado': idiomaSeleccionado === 'ingles'}"
+        (click)="onSeleccionarIdioma('ingles')" style="background-image: url('../../assets/images/usa.png');"></button>
     </div>
     <div class="header-row">
-      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'colores'}" (click)="onSeleccionarTema('colores')"
+      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'colores'}"
+        (click)="onSeleccionarTema('colores')"
         style="background-image: url('../../assets/images/colores.png');"></button>
-      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'numeros'}" (click)="onSeleccionarTema('numeros')"
+      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'numeros'}"
+        (click)="onSeleccionarTema('numeros')"
         style="background-image: url('../../assets/images/numeros.png');"></button>
-      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'animales'}" (click)="onSeleccionarTema('animales')"
+      <button ion-button class="header-button temas" [ngClass]="{'seleccionado': temaSeleccionado === 'animales'}"
+        (click)="onSeleccionarTema('animales')"
         style="background-image: url('../../assets/images/patita.png');"></button>
     </div>
   </div>
 
-  <!-- Parte principal con 6 botones cuadrados que ocupan toda la pantalla -->
   <div class="buttons-grid">
     <button ion-button class="square-button" (click)="onReproducirSonido(1)"
       style="background-image:url('{{ obtenerRutaImagen(1) }}')"></button>
@@ -35,9 +39,8 @@
       style="background-image:url('{{ obtenerRutaImagen(6) }}')"></button>
   </div>
 
-  <!-- Footer con botón de cierre de sesión -->
   <div class="footer-container">
     <button ion-button class="footer-button" (click)="onLogoutClick()"
       style="background-image: url('../../assets/images/boton-salir.png');"></button>
   </div>
-</ion-content>
+</div>
