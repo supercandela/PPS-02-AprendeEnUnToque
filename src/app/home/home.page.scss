@@ -39,7 +39,7 @@
 }
 
 .buttons-grid {
-  padding: 0 20px;
+  padding: 0 5px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -116,7 +116,7 @@
   }
 
   .buttons-grid {
-    padding: 20px 0;
+    padding: 5px 0;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     width: calc(100% - 20% - 7%);
