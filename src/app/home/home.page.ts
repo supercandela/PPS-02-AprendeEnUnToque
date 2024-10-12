@@ -45,19 +45,17 @@ export class HomePage implements OnInit {
   }
 
   // Método para seleccionar un tema
-  onSeleccionarTema (tema: string) {
+  onSeleccionarTema(tema: string) {
     this.temaSeleccionado = tema; // Actualiza el tema seleccionado
   }
 
   // Método para obtener la ruta de la imagen según el botón
-  obtenerRutaImagen (boton: number): string {
+  obtenerRutaImagen(boton: number): string {
     console.log(this.imagenesPorTema[this.temaSeleccionado][boton - 1]);
     return this.imagenesPorTema[this.temaSeleccionado][boton - 1];
   }
 
-  onSeleccionarIdioma (idioma: number) {
-
-  }
+  onSeleccionarIdioma(idioma: number) {}
 
   onMainButtonClick(num: number) {}
 

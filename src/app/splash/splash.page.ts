@@ -9,9 +9,7 @@ import { Router } from '@angular/router';
 export class SplashPage implements OnInit {
   isVisible: boolean = true;
 
-  constructor(
-    private router: Router
-  ) {
+  constructor(private router: Router) {
     setTimeout(() => {
       this.router.navigateByUrl('/home');
     }, 3500);
@@ -21,10 +19,9 @@ export class SplashPage implements OnInit {
     this.ocultarNombreYDivision();
   }
 
-  ocultarNombreYDivision () {
+  ocultarNombreYDivision() {
     setTimeout(() => {
       this.isVisible = false;
     }, 1000);
   }
-
 }
