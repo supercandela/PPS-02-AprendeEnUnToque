@@ -63,6 +63,19 @@ export class HomePage implements OnInit {
 
   // Método para reproducir sonido
   reproducirSonido(botonId: number) {
+    // Agrega la animación al botón
+    const buttonElement = document.querySelector(
+      `.square-button:nth-child(${botonId})`
+    );
+    if (buttonElement) {
+      buttonElement.classList.add('animated-button');
+
+      // Elimina la animación después de que termine (en este caso, 300ms)
+      setTimeout(() => {
+        buttonElement.classList.remove('animated-button');
+      }, 300);
+    }
+
     const rutaSonido = this.obtenerRutaSonido(botonId);
     const audio = new Audio(rutaSonido);
     audio.play();
