@@ -1,47 +1,26 @@
-<!-- <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button (click)="onLogout()">
-        Cerrar sesión
-      </ion-button>
-    </ion-buttons>
-    <ion-title>Bienvenido</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-
-  <div class="buttons-container">
-    <button ion-button class="full-height-button button-left"></button>
-    <button ion-button class="full-height-button button-right"></button>
-  </div>
-
-</ion-content> -->
-
-
 <ion-content>
   <!-- Header con 6 botones en dos filas de 3 botones, con imágenes de fondo -->
   <div class="header-container">
     <div class="header-row">
-      <button ion-button class="header-button banderas" (click)="onHeaderButtonClick(1)" style="background-image: url('../../assets/images/argentina.png');"></button>
-      <button ion-button class="header-button banderas" (click)="onHeaderButtonClick(2)" style="background-image: url('../../assets/images/brasil.png');"></button>
-      <button ion-button class="header-button banderas" (click)="onHeaderButtonClick(3)" style="background-image: url('../../assets/images/usa.png');"></button>
+      <button ion-button class="header-button banderas" (click)="onSeleccionarIdioma(1)" style="background-image: url('../../assets/images/argentina.png');"></button>
+      <button ion-button class="header-button banderas" (click)="onSeleccionarIdioma(2)" style="background-image: url('../../assets/images/brasil.png');"></button>
+      <button ion-button class="header-button banderas" (click)="onSeleccionarIdioma(3)" style="background-image: url('../../assets/images/usa.png');"></button>
     </div>
     <div class="header-row">
-      <button ion-button class="header-button temas" (click)="onHeaderButtonClick(4)" style="background-image: url('../../assets/images/colores.png');"></button>
-      <button ion-button class="header-button temas" (click)="onHeaderButtonClick(5)" style="background-image: url('../../assets/images/numeros.png');"></button>
-      <button ion-button class="header-button temas" (click)="onHeaderButtonClick(6)" style="background-image: url('../../assets/images/patita.png');"></button>
+      <button ion-button class="header-button temas" (click)="onSeleccionarTema('colores')" style="background-image: url('../../assets/images/colores.png');"></button>
+      <button ion-button class="header-button temas" (click)="onSeleccionarTema('numeros')" style="background-image: url('../../assets/images/numeros.png');"></button>
+      <button ion-button class="header-button temas" (click)="onSeleccionarTema('animales')" style="background-image: url('../../assets/images/patita.png');"></button>
     </div>
   </div>
 
   <!-- Parte principal con 6 botones cuadrados que ocupan toda la pantalla -->
   <div class="buttons-grid">
-    <button ion-button class="square-button" (click)="onMainButtonClick(1)" style="background-image: url('assets/img/button1.jpg');"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(2)" style="background-image: url('assets/img/button2.jpg');"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(3)" style="background-image: url('assets/img/button3.jpg');"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(4)" style="background-image: url('assets/img/button4.jpg');"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(5)" style="background-image: url('assets/img/button5.jpg');"></button>
-    <button ion-button class="square-button" (click)="onMainButtonClick(6)" style="background-image: url('assets/img/button6.jpg');"></button>
+    <button ion-button class="square-button" (click)="onMainButtonClick(1)" style="background-image:url('{{ obtenerRutaImagen(1) }}')"></button>
+    <button ion-button class="square-button" (click)="onMainButtonClick(2)" style="background-image:url('{{ obtenerRutaImagen(2) }}')"></button>
+    <button ion-button class="square-button" (click)="onMainButtonClick(3)" style="background-image:url('{{ obtenerRutaImagen(3) }}')"></button>
+    <button ion-button class="square-button" (click)="onMainButtonClick(4)" style="background-image:url('{{ obtenerRutaImagen(4) }}')"></button>
+    <button ion-button class="square-button" (click)="onMainButtonClick(5)" style="background-image:url('{{ obtenerRutaImagen(5) }}')"></button>
+    <button ion-button class="square-button" (click)="onMainButtonClick(6)" style="background-image:url('{{ obtenerRutaImagen(6) }}')"></button>
   </div>
 
   <!-- Footer con botón de cierre de sesión -->
